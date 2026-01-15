@@ -2,6 +2,16 @@ applyTo: "**/*.cs,**/*.csproj,**/*.sln"
 
 # AI Instructions for C# Projects, Solutions, and Tests
 
+## General Code Generation Instructions
+- Always create a NEW BRANCH when you start working on a feature or bugfix.
+- Write clean, maintainable, and well-documented code.
+- Always create unit tests for classes and methods you generate.
+- Always run tests before comitting code.
+- Follow .NET naming conventions: PascalCase for classes/methods, camelCase for local variables, _camelCase for private fields.
+- Use XML documentation comments for classes, methods, and public APIs.
+- Ensure generated code is compatible with .NET 8.0 and C# 9+
+- Always use async/await for I/O-bound operations.
+
 ## .NET 8.0+ Project Structure & Conventions
 
 ### Project Organization
@@ -33,8 +43,8 @@ applyTo: "**/*.cs,**/*.csproj,**/*.sln"
 ## Unit Testing with xUnit
 
 ### Test Project Setup
-- Add xUnit reference to `.csproj`: `<PackageReference Include="xunit" Version="2.6.*"/>`
-- Add test runner: `<PackageReference Include="xunit.runner.visualstudio" Version="2.5.*"/>`
+- Using xUnit reference to `.csproj`: `<PackageReference Include="xunit.v3" Version="3.*"/>`
+- Using test runner: `<PackageReference Include="xunit.runner.visualstudio" Version="3.*"/>`
 - Test classes don't inherit from base class; use `[Fact]` and `[Theory]` attributes
 - Name test methods descriptively: `MethodName_Scenario_ExpectedResult()` or `Should_ReturnValue_WhenConditionMet()`
 
@@ -74,7 +84,7 @@ public void Add_MultipleInputs_ReturnsCorrectSum(int a, int b, int expected)
 ## Mocking with Moq
 
 ### Setup & Usage
-- Add Moq: `<PackageReference Include="Moq" Version="4.20.*"/>`
+- Using Moq: `<PackageReference Include="Moq" Version="4.20.*"/>`
 - Create mocks for interfaces/abstract classes: `var mockService = new Mock<IUserService>();`
 - Set up return values: `mockService.Setup(m => m.GetUser(It.IsAny<int>())).ReturnsAsync(testUser);`
 - Verify calls: `mockService.Verify(m => m.DeleteUser(userId), Times.Once);`
