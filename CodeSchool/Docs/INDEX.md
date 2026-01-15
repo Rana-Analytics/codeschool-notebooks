@@ -1,6 +1,6 @@
 # BankingCS Project Index
 
-**Complete, production-ready C# learning project with 7 classes, 110+ tests, and comprehensive documentation.**
+**Complete, production-ready C# learning project with 7 classes, 66+ tests, and comprehensive documentation.**
 
 ---
 
@@ -178,7 +178,7 @@ CodeSchool/
 ✅ Run `dotnet test --filter "AccountStatement"` → All pass
 
 ### COMPLETION
-✅ Run `dotnet test` → 110+ tests pass  
+✅ Run `dotnet test` → 66+ tests pass  
 ✅ No compilation errors  
 ✅ Clean, readable code  
 ✅ Understand OOP principles
@@ -218,7 +218,7 @@ dotnet test --filter "SavingsAccount" --logger "console;verbosity=detailed"
 
 ```
 Source Code:          ~850 lines (7 classes, 2 complete + 5 frameworks)
-Unit Tests:           ~1500 lines (110+ tests)
+Unit Tests:           ~1500 lines (66+ tests)
 Documentation:        ~2100 lines (7 comprehensive guides)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TOTAL:               ~4450 lines
@@ -323,7 +323,7 @@ dotnet build
 ✅ SavingsAccount tests all passing (Week 4)  
 ✅ CheckingAccount tests all passing (Week 5)  
 ✅ AccountStatement tests all passing (Week 6)  
-✅ All 110+ tests passing (Final)  
+✅ All 66+ tests passing (Final)  
 ✅ Code compiles with no warnings  
 ✅ Understand OOP principles  
 

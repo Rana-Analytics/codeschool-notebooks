@@ -52,6 +52,9 @@ Comprehensive unit tests validating both the foundation and student implementati
 
 ### Running the Tests
 
+From the terminal inside VS Code run the following commands:
+(Ctrl+Shirt+P then type "Terminal: Create New Terminal" to open a fresh one)
+
 ```bash
 cd CodeSchool
 dotnet test
@@ -60,11 +63,13 @@ dotnet test
 ### Expected Output
 
 Initially, you should see:
-- ✓ All BankAccount/Transaction tests passing (~50 tests)
+- ✓ All BankAccount/Transaction tests passing (~25 tests)
 - ✗ Framework tests failing with `NotImplementedException`
 
+Open the [Test log](../CodeSchool/BankingCS.Tests/bin/Debug/net8.0/TestResults/BankingCS.Tests_net8.0_x64.log) to see specifics on failures.
+
 After implementing framework classes:
-- ✓ All tests passing (~110 tests)
+- ✓ All tests passing (~66 tests)
 
 ## Learning Path
 
@@ -400,7 +405,7 @@ CodeSchool/
 
 Your implementation is complete when:
 
-1. ✓ All 110+ unit tests pass
+1. ✓ All 66+ unit tests pass
 2. ✓ No compilation errors or warnings
 3. ✓ All methods work with the examples in tests
 4. ✓ Edge cases are handled properly

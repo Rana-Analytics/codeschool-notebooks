@@ -155,11 +155,11 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
 - **Phase 6**: Reporting - Implement AccountStatement
 
 ### Test-Driven Development
-- Foundation classes have 40+ passing tests
-- Framework classes have 70+ tests that initially fail
+- Foundation classes have 25+ passing tests
+- Framework classes have 40+ tests that initially fail
 - Students implement against test requirements
 - Clear feedback on what's working/broken
-- 110+ total tests ensure comprehensive coverage
+- 66+ total tests ensure comprehensive coverage
 
 ### Real-World Context
 - Uses banking domain that's familiar to accounting-background developers
@@ -268,7 +268,7 @@ For students who complete the curriculum:
 ## Success Metrics
 
 Project is successful when:
-- ✅ All 110+ unit tests pass
+- ✅ All 66+ unit tests pass
 - ✅ Code compiles with no errors or warnings
 - ✅ Student code demonstrates understanding of OOP
 - ✅ Code follows C# naming conventions

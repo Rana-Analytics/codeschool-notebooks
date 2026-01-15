@@ -203,7 +203,7 @@ Tests ARE the specification. When in doubt:
 - [ ] All 10+ tests passing
 
 ### Final
-- [ ] Run: `dotnet test` (all 110+ tests)
+- [ ] Run: `dotnet test` (all 66+ tests)
 - [ ] Code review your implementations
 - [ ] Celebrate completion!
 
@@ -254,14 +254,14 @@ TOTAL                       ~850 lines
 
 ### Test Coverage
 ```
-UnitTest1.cs                40+ tests (Foundation)
-CategorizedTransactionTests.cs    7 tests (Framework)
-InterestBearingAccountTests.cs    5 tests (Framework)
-SavingsAccountTests.cs            7 tests (Framework)
-CheckingAccountTests.cs           8 tests (Framework)
-AccountStatementTests.cs         10+ tests (Framework)
+BankAccountTests.cs              25+ tests (Foundation)
+CategorizedTransactionTests.cs    9  tests (Framework)
+InterestBearingAccountTests.cs    5  tests (Framework)
+SavingsAccountTests.cs            7  tests (Framework)
+CheckingAccountTests.cs           9  tests (Framework)
+AccountStatementTests.cs         11+ tests (Framework)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TOTAL                       110+ tests
+TOTAL                            66+ tests
 ```
 
 ### Documentation
@@ -308,7 +308,7 @@ TOTAL                       ~2100 lines
 ## Success Checklist
 
 Project complete when:
-- [ ] All 110+ tests pass
+- [ ] All 66+ tests pass
 - [ ] No compilation errors or warnings
 - [ ] Code follows C# naming conventions
 - [ ] Methods are focused (single responsibility)
