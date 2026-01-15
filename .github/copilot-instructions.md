@@ -7,10 +7,10 @@ This repository contains interactive .NET Jupyter notebooks for learning C# and 
 - **csharp-scenarios**: Real-world C# application examples  
 - **machine-learning**: ML workflows with C# using AutoML, data processing, and model evaluation
 - **notebook-getting-started**: User guides for working with .NET Interactive notebooks
-- **.NET Projects**: Reusable C# libraries and associated unit tests (coming soon)
+- **CodeSchool**: Example C# code and associated unit tests for the purpose of teaching C# concepts.
 
 ## Target Environment
-- **SDK**: .NET 8.0.117 (specified in `global.json`)
+- **SDK**: .NET 8.0.+ (specified in `global.json`)
 - **Language**: C# 9+ features acceptable (string interpolation, var inference, nullable reference types)
 - **Code Format**: Notebooks are XML-based; Projects use standard `.csproj`/`.cs` files
 
