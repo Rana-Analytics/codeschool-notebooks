@@ -554,4 +554,4 @@ Console.WriteLine($"Number of deposits: {count}");
 
 ---
 
-For complete examples and context, see the BankingCS source code and BANKING_CURRICULUM.md.
+For complete examples and context, see the BankingCS source code and Docs/BANKING_CURRICULUM.md.

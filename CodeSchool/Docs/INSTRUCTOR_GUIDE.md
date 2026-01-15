@@ -22,7 +22,7 @@ BankingCS is a comprehensive, hands-on C# learning project designed to deepen ju
 1. Read IMPLEMENTATION_SUMMARY.md for complete overview
 2. Study BANKING_CURRICULUM.md for learning objectives
 3. Run tests locally: `cd CodeSchool && dotnet test`
-4. Review the source code in BankingCS/ and BankingCS.Tests/
+4. Review the source code in ../BankingCS/ and ../BankingCS.Tests/
 
 ## Curriculum Integration
 
@@ -47,12 +47,12 @@ More Advanced C# Topics (SOLID, Design Patterns, Async)
   - Have students clone repo
   - Open CodeSchool/ folder in VS Code
   - Run `dotnet test` to see test output
-  - Read README.md Getting Started section
+  - Read ../README.md Getting Started section
   
 - Day 2-3: Study existing code
-  - Read Transaction.cs line by line
-  - Read BankAccount.cs and understand design
-  - Study BankAccountTests to see how they work
+  - Read ../BankingCS/Transaction.cs line by line
+  - Read ../BankingCS/BankAccount.cs and understand design
+  - Study ../BankingCS.Tests/BankAccountTests.cs to see how tests work
   - Discuss: Why are properties immutable? What happens if you try to set Amount?
   - Run tests: `dotnet test --filter "BankAccount"`
   - Should see 40+ tests passing
@@ -234,7 +234,7 @@ Console.WriteLine($"Withdrawal count: {withdrawalsThisMonth}");
 
 **Pre-Class**:
 - Students read BANKING_CURRICULUM.md "Checking Account" section
-- Students review CheckingAccountTests to understand expectations
+- Students review ../BankingCS.Tests/CheckingAccountTests.cs to understand expectations
 
 **Class Activities**:
 - Day 1: Checking account features discussion
@@ -529,7 +529,7 @@ dotnet test --logger "console;verbosity=detailed"
 
 ### Documentation
 - BANKING_CURRICULUM.md - Complete learning objectives
-- README.md - Student getting started guide
+- ../README.md - Student getting started guide
 - QUICK_REFERENCE.md - C# syntax reference
 - Unit tests - Show expected behavior
 

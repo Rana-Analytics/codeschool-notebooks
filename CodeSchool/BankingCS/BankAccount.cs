@@ -78,7 +78,7 @@ public class BankAccount
     /// <param name="date">The date of the deposit.</param>
     /// <param name="note">A description of the deposit.</param>
     /// <exception cref="ArgumentOutOfRangeException">Thrown if amount is not positive.</exception>
-    public void MakeDeposit(decimal amount, DateTime date, string note)
+    public virtual void MakeDeposit(decimal amount, DateTime date, string note)
     {
         if (amount <= 0)
         {
@@ -97,7 +97,7 @@ public class BankAccount
     /// <param name="note">A description of the withdrawal.</param>
     /// <exception cref="ArgumentOutOfRangeException">Thrown if amount is not positive.</exception>
     /// <exception cref="InvalidOperationException">Thrown if withdrawal would result in negative balance.</exception>
-    public void MakeWithdrawal(decimal amount, DateTime date, string note)
+    public virtual void MakeWithdrawal(decimal amount, DateTime date, string note)
     {
         if (amount <= 0)
         {

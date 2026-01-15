@@ -36,8 +36,12 @@ Students should study these classes to understand:
 ### Test Project: `BankingCS.Tests/`
 Comprehensive unit tests validating both the foundation and student implementation.
 
-- **`UnitTest1.cs`**: Tests for Transaction and BankAccount (40+ tests)
-- **`StudentFrameworkTests.cs`**: Tests for all student assignments (60+ tests)
+- **`BankAccountTests.cs`**: Tests for Transaction and BankAccount (40+ tests)
+- **`CategorizedTransactionTests.cs`**: Tests for CategorizedTransaction (7 tests)
+- **`InterestBearingAccountTests.cs`**: Tests for InterestBearingAccount (5 tests)
+- **`SavingsAccountTests.cs`**: Tests for SavingsAccount (7 tests)
+- **`CheckingAccountTests.cs`**: Tests for CheckingAccount (8 tests)
+- **`AccountStatementTests.cs`**: Tests for AccountStatement (10+ tests)
 
 ## Getting Started
 
@@ -202,6 +206,8 @@ dotnet test
 dotnet test --filter "SavingsAccount"
 dotnet test --filter "CategorizedTransaction"
 dotnet test --filter "AccountStatement"
+dotnet test --filter "CheckingAccount"
+dotnet test --filter "InterestBearingAccount"
 ```
 
 ### Running Tests Verbosely
@@ -365,8 +371,12 @@ BankingCS/
 ### Tests
 ```
 BankingCS.Tests/
-├── UnitTest1.cs                # BankAccount/Transaction tests
-├── StudentFrameworkTests.cs    # Framework class tests
+├── UnitTest1.cs                      # BankAccount/Transaction tests
+├── CategorizedTransactionTests.cs    # CategorizedTransaction tests
+├── InterestBearingAccountTests.cs    # InterestBearingAccount tests
+├── SavingsAccountTests.cs            # SavingsAccount tests
+├── CheckingAccountTests.cs           # CheckingAccount tests
+├── AccountStatementTests.cs          # AccountStatement tests
 ├── BankingCS.Tests.csproj
 └── xunit.runner.json
 ```
@@ -374,9 +384,16 @@ BankingCS.Tests/
 ### Documentation
 ```
 CodeSchool/
-├── BANKING_CURRICULUM.md       # Complete curriculum guide
-├── README.md                   # This file
-└── CodeSchool.sln              # Solution file
+├── README.md                         # This file
+├── Docs/                             # Documentation folder
+│   ├── BANKING_CURRICULUM.md         # Complete curriculum guide
+│   ├── FILE_GUIDE.md                 # File index and reading order
+│   ├── QUICK_REFERENCE.md            # C# syntax reference
+│   ├── INSTRUCTOR_GUIDE.md           # Teaching guide
+│   ├── IMPLEMENTATION_SUMMARY.md     # Implementation details
+│   ├── DELIVERY_SUMMARY.md           # Project delivery overview
+│   └── INDEX.md                      # Navigation hub
+└── CodeSchool.sln                    # Solution file
 ```
 
 ## Success Criteria

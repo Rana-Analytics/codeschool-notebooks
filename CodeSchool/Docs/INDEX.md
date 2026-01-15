@@ -7,11 +7,13 @@
 ## 🚀 Quick Start (5 minutes)
 
 ### For Students
+From the terminal inside VS Code, run the following (assuming you start on a new terminal):
+
 ```bash
 cd CodeSchool
 dotnet test  # See all tests
 ```
-Then read: **README.md** → [Getting Started](README.md)
+Then read: **README.md** → [Getting Started](../README.md)
 
 ### For Instructors
 Read in this order:
@@ -34,16 +36,21 @@ CodeSchool/
 │   ├── CheckingAccount.cs              🔧 Student: Implement
 │   └── AccountStatement.cs             🔧 Student: Implement
 ├── BankingCS.Tests/                    # Unit Tests
-│   ├── UnitTest1.cs                    ✅ 40+ Foundation Tests
-│   └── StudentFrameworkTests.cs        🔧 70+ Framework Tests
-├── Documentation/
-│   ├── README.md                       📚 Getting Started
+│   ├── BankAccountTests.cs             ✅ 40+ Foundation Tests
+│   ├── CategorizedTransactionTests.cs  🔧 7 Framework Tests
+│   ├── InterestBearingAccountTests.cs  🔧 5 Framework Tests
+│   ├── SavingsAccountTests.cs          🔧 7 Framework Tests
+│   ├── CheckingAccountTests.cs         🔧 8 Framework Tests
+│   └── AccountStatementTests.cs        🔧 10+ Framework Tests
+├── Docs/                               # Documentation
 │   ├── BANKING_CURRICULUM.md           📚 Complete Curriculum
 │   ├── QUICK_REFERENCE.md              📚 C# Syntax Reference
 │   ├── INSTRUCTOR_GUIDE.md             📚 Teaching Guide
 │   ├── IMPLEMENTATION_SUMMARY.md       📚 What Was Created
 │   ├── FILE_GUIDE.md                   📚 File Index
-│   └── DELIVERY_SUMMARY.md             📚 Project Summary
+│   ├── DELIVERY_SUMMARY.md             📚 Project Summary
+│   └── INDEX.md                        📚 This file
+├── README.md                           📚 Getting Started
 └── CodeSchool.sln                      Solution file
 ```
 
@@ -54,7 +61,7 @@ CodeSchool/
 ### For Students
 | Document | Purpose | Time | When to Read |
 |-----------|---------|------|-------------|
-| [README.md](README.md) | Getting started guide | 30 min | First! |
+| [../README.md](../README.md) | Getting started guide | 30 min | First! |
 | [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | C# syntax help | On-demand | When stuck |
 | [BANKING_CURRICULUM.md](BANKING_CURRICULUM.md#key-concepts-covered) | Concept explanation | As needed | To understand concepts |
 
@@ -71,37 +78,37 @@ CodeSchool/
 ## 🎯 Learning Path
 
 ### Phase 1: Foundation (Week 1)
-- **Study**: Transaction.cs, BankAccount.cs
+- **Study**: ../BankingCS/Transaction.cs, ../BankingCS/BankAccount.cs
 - **Run**: `dotnet test --filter "BankAccount"`
 - **Expected**: 40+ tests passing
 - **Time**: 2-3 hours
 
 ### Phase 2: Categorization (Week 2)
-- **Implement**: CategorizedTransaction.cs
+- **Implement**: ../BankingCS/CategorizedTransaction.cs
 - **Concepts**: Inheritance, Enums, Constructor chaining
 - **Run**: `dotnet test --filter "CategorizedTransaction"`
 - **Time**: 3-4 hours
 
 ### Phase 3: Abstract Classes (Week 3)
-- **Implement**: InterestBearingAccount.cs
+- **Implement**: ../BankingCS/InterestBearingAccount.cs
 - **Concepts**: Abstract classes, Static methods, Template Method pattern
 - **Run**: `dotnet test --filter "InterestBearing"`
 - **Time**: 4-5 hours
 
 ### Phase 4: Savings Account (Week 4)
-- **Implement**: SavingsAccount.cs
+- **Implement**: ../BankingCS/SavingsAccount.cs
 - **Concepts**: Method override, Business logic, State tracking
 - **Run**: `dotnet test --filter "SavingsAccount"`
 - **Time**: 5-6 hours
 
 ### Phase 5: Checking Account (Week 5)
-- **Implement**: CheckingAccount.cs
+- **Implement**: ../BankingCS/CheckingAccount.cs
 - **Concepts**: Alternative implementations, Feature flags, Tiered logic
 - **Run**: `dotnet test --filter "CheckingAccount"`
 - **Time**: 4-5 hours
 
 ### Phase 6: Statements (Week 6)
-- **Implement**: AccountStatement.cs
+- **Implement**: ../BankingCS/AccountStatement.cs
 - **Concepts**: LINQ, Filtering, Aggregation, Reporting
 - **Run**: `dotnet test --filter "AccountStatement"`
 - **Time**: 6-8 hours
@@ -111,18 +118,18 @@ CodeSchool/
 ## 🔍 Finding What You Need
 
 ### Learning a Concept?
-- **Properties**: See Transaction.cs (immutable) and BankAccount.cs (read/write, computed)
-- **Inheritance**: See CategorizedTransaction.cs
-- **Abstract Classes**: See InterestBearingAccount.cs
-- **Override**: See SavingsAccount.cs and CheckingAccount.cs
-- **LINQ**: See AccountStatement.cs
-- **Testing**: See both test files for patterns
+- **Properties**: See ../BankingCS/Transaction.cs (immutable) and ../BankingCS/BankAccount.cs (read/write, computed)
+- **Inheritance**: See ../BankingCS/CategorizedTransaction.cs
+- **Abstract Classes**: See ../BankingCS/InterestBearingAccount.cs
+- **Override**: See ../BankingCS/SavingsAccount.cs and ../BankingCS/CheckingAccount.cs
+- **LINQ**: See ../BankingCS/AccountStatement.cs
+- **Testing**: See ../BankingCS.Tests/ for patterns
 
 ### Stuck on Implementation?
 1. **Read the TODO comment** in the source file
 2. **Look at the test** to understand expectations
 3. **Check QUICK_REFERENCE.md** for syntax
-4. **Compare with working code** (Transaction or BankAccount)
+4. **Compare with working code** (../BankingCS/Transaction.cs or ../BankingCS/BankAccount.cs)
 5. **Print debug values** to trace execution
 
 ### Understanding Requirements?
@@ -196,7 +203,7 @@ dotnet test --filter "SavingsAccount" --logger "console;verbosity=detailed"
 ### Don't Understand a Concept
 1. Check **QUICK_REFERENCE.md** for syntax
 2. Check **BANKING_CURRICULUM.md** for explanation
-3. Look at **working examples** (Transaction.cs, BankAccount.cs)
+3. Look at **working examples** (../BankingCS/Transaction.cs, ../BankingCS/BankAccount.cs)
 4. Check the **test** to see expected behavior
 
 ### Can't Figure Out Implementation
@@ -212,7 +219,7 @@ dotnet test --filter "SavingsAccount" --logger "console;verbosity=detailed"
 ```
 Source Code:          ~850 lines (7 classes, 2 complete + 5 frameworks)
 Unit Tests:           ~1500 lines (110+ tests)
-Documentation:        ~2100 lines (6 comprehensive guides)
+Documentation:        ~2100 lines (7 comprehensive guides)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TOTAL:               ~4450 lines
 
@@ -288,9 +295,9 @@ dotnet build
 ## 📖 Reading Order
 
 ### Students (First Time)
-1. [README.md](README.md) - 30 min
-2. Study Transaction.cs - 20 min
-3. Study BankAccount.cs - 30 min
+1. [../README.md](../README.md) - 30 min
+2. Study ../BankingCS/Transaction.cs - 20 min
+3. Study ../BankingCS/BankAccount.cs - 30 min
 4. Run tests - 10 min
 5. Pick a framework class - depends on phase
 
@@ -302,7 +309,7 @@ dotnet build
 5. Review tests - 30 min
 
 ### Reviewing Progress
-1. Run `dotnet test --filter "StudentName"`
+1. Run `dotnet test --filter "CategorizedTransaction"` (or other class)
 2. Check specific test outputs
 3. Review code in source files
 4. Provide feedback based on tests
@@ -325,24 +332,28 @@ dotnet build
 ## 🔗 Quick Links
 
 ### Documentation
-- [README - Getting Started](README.md)
+- [README - Getting Started](../README.md)
 - [INSTRUCTOR_GUIDE - Teaching Strategy](INSTRUCTOR_GUIDE.md)
 - [BANKING_CURRICULUM - Learning Objectives](BANKING_CURRICULUM.md)
 - [QUICK_REFERENCE - C# Syntax Help](QUICK_REFERENCE.md)
 - [FILE_GUIDE - File Index](FILE_GUIDE.md)
 
 ### Source Code
-- [Transaction.cs](BankingCS/Transaction.cs) - Study
-- [BankAccount.cs](BankingCS/BankAccount.cs) - Study
-- [CategorizedTransaction.cs](BankingCS/CategorizedTransaction.cs) - Implement
-- [InterestBearingAccount.cs](BankingCS/InterestBearingAccount.cs) - Implement
-- [SavingsAccount.cs](BankingCS/SavingsAccount.cs) - Implement
-- [CheckingAccount.cs](BankingCS/CheckingAccount.cs) - Implement
-- [AccountStatement.cs](BankingCS/AccountStatement.cs) - Implement
+- [Transaction.cs](../BankingCS/Transaction.cs) - Study
+- [BankAccount.cs](../BankingCS/BankAccount.cs) - Study
+- [CategorizedTransaction.cs](../BankingCS/CategorizedTransaction.cs) - Implement
+- [InterestBearingAccount.cs](../BankingCS/InterestBearingAccount.cs) - Implement
+- [SavingsAccount.cs](../BankingCS/SavingsAccount.cs) - Implement
+- [CheckingAccount.cs](../BankingCS/CheckingAccount.cs) - Implement
+- [AccountStatement.cs](../BankingCS/AccountStatement.cs) - Implement
 
 ### Tests
-- [UnitTest1.cs](BankingCS.Tests/UnitTest1.cs) - Foundation tests
-- [StudentFrameworkTests.cs](BankingCS.Tests/StudentFrameworkTests.cs) - Framework tests
+- [BankAccountTests.cs](../BankingCS.Tests/BankAccountTests.cs) - Foundation tests
+- [CategorizedTransactionTests.cs](../BankingCS.Tests/CategorizedTransactionTests.cs) - Framework tests
+- [InterestBearingAccountTests.cs](../BankingCS.Tests/InterestBearingAccountTests.cs) - Framework tests
+- [SavingsAccountTests.cs](../BankingCS.Tests/SavingsAccountTests.cs) - Framework tests
+- [CheckingAccountTests.cs](../BankingCS.Tests/CheckingAccountTests.cs) - Framework tests
+- [AccountStatementTests.cs](../BankingCS.Tests/AccountStatementTests.cs) - Framework tests
 
 ---
 
@@ -364,12 +375,12 @@ dotnet build
 - **C# Questions**: See QUICK_REFERENCE.md
 - **Concept Questions**: See BANKING_CURRICULUM.md
 - **Teaching Questions**: See INSTRUCTOR_GUIDE.md
-- **Implementation Help**: Look at working classes (Transaction, BankAccount)
+- **Implementation Help**: Look at working classes (../BankingCS/Transaction.cs, ../BankingCS/BankAccount.cs)
 - **Test Failures**: Read test code to understand expectations
 - **Debugging**: Add print statements and trace execution
 
 ---
 
-**Start with README.md → Then follow the learning path → Run tests frequently**
+**Start with ../README.md → Then follow the learning path → Run tests frequently**
 
 Good luck! 🎓

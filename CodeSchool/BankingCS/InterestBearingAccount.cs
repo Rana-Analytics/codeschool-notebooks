@@ -129,7 +129,7 @@ public abstract class InterestBearingAccount : BankAccount
     /// </summary>
     /// <param name="rate">The interest rate to validate.</param>
     /// <returns>True if the rate is valid, false otherwise.</returns>
-    protected static bool IsValidInterestRate(decimal rate)
+    public static bool IsValidInterestRate(decimal rate)
     {
         // TODO: Implement validation logic
         throw new NotImplementedException("Student must implement this method");

@@ -7,7 +7,7 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
 ## Project Structure
 
 ### Completed Foundation Classes
-**Location**: `CodeSchool/BankingCS/`
+**Location**: `../BankingCS/`
 
 1. **Transaction.cs** (✅ Fully Implemented)
    - Represents a single transaction (deposit or withdrawal)
@@ -25,7 +25,7 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
    - ~120 lines with detailed comments
 
 ### Student Framework Classes
-**Location**: `CodeSchool/BankingCS/` (Ready for Student Implementation)
+**Location**: `../BankingCS/` (Ready for Student Implementation)
 
 1. **CategorizedTransaction.cs** (🔧 Framework)
    - Extends Transaction with categorization
@@ -67,37 +67,29 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
    - ~250 lines with detailed LINQ guidance
 
 ### Unit Tests
-**Location**: `CodeSchool/BankingCS.Tests/`
+**Location**: `../BankingCS.Tests/`
 
-1. **UnitTest1.cs** - BankAccountTests
+1. **BankAccountTests.cs** - BankAccountTests
    - 40+ comprehensive tests for Transaction and BankAccount
    - Demonstrates AAA (Arrange-Act-Assert) pattern
    - Tests constructors, properties, methods, exceptions
    - Tests edge cases and integration scenarios
    - All should pass immediately after understanding foundation classes
 
-2. **StudentFrameworkTests.cs** - Framework Tests
-   - 70+ tests for student framework classes
-   - CategorizedTransactionTests (7 tests)
-   - SavingsAccountTests (7 tests)
-   - CheckingAccountTests (8 tests)
-   - AccountStatementTests (10 tests)
+2. **Split Test Files** - Framework Tests
+   - 70+ tests spread across individual test files for each framework class
+   - CategorizedTransactionTests.cs (7 tests)
+   - InterestBearingAccountTests.cs (5 tests)
+   - SavingsAccountTests.cs (7 tests)
+   - CheckingAccountTests.cs (8 tests)
+   - AccountStatementTests.cs (10 tests)
    - Tests will fail until students implement the classes
    - Provides clear feedback on what's expected
 
 ### Documentation
-**Location**: `CodeSchool/`
+**Location**: `CodeSchool/Docs/`
 
-1. **README.md** - Complete Getting Started Guide
-   - Project overview and structure
-   - Installation and setup
-   - Detailed learning path (6 phases)
-   - Key concepts reference
-   - Debugging tips and common errors
-   - Testing strategy and commands
-   - Next steps and extensions
-
-2. **BANKING_CURRICULUM.md** - Comprehensive Learning Curriculum
+1. **BANKING_CURRICULUM.md** - Comprehensive Learning Curriculum
    - Overview of the entire project
    - Detailed learning objectives for each level
    - Week-by-week pacing guide
@@ -108,7 +100,7 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
    - Assessment rubric
    - Instructor notes and teaching strategies
 
-3. **QUICK_REFERENCE.md** - C# Syntax Reference
+2. **QUICK_REFERENCE.md** - C# Syntax Reference
    - Properties (read-only, read/write, computed, init)
    - Access modifiers and encapsulation
    - Constructors and inheritance
@@ -121,6 +113,36 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
    - String formatting
    - Testing patterns
    - Common debugging patterns
+
+3. **FILE_GUIDE.md** - Complete File Index
+   - File purposes and organization
+   - Reading order for different audiences
+   - Learning concepts quick reference
+   - Test running commands
+   - Progress tracking checklist
+   - File statistics
+
+4. **INSTRUCTOR_GUIDE.md** - Teaching Guide
+   - Week-by-week curriculum
+   - Teaching strategies and discussion points
+   - Common errors and how to address them
+   - Assessment rubric
+   - Troubleshooting guide
+   - Extension activities
+
+5. **DELIVERY_SUMMARY.md** - Project Overview
+   - Quick project statistics
+   - Deliverables checklist
+   - Integration with C# 101
+   - Student outcomes
+   - File locations
+
+6. **INDEX.md** - Navigation Hub
+   - Quick start instructions
+   - Project structure overview
+   - Documentation guide
+   - Concept finder
+   - Troubleshooting
 
 ## Key Features
 
@@ -156,20 +178,20 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
 
 ### For Instructors
 1. Review the project structure and files
-2. Understand the learning progression in BANKING_CURRICULUM.md
-3. Use README.md as the primary student guide
+2. Understand the learning progression in Docs/BANKING_CURRICULUM.md
+3. Use ../README.md as the primary student guide
 4. Run tests with `dotnet test` to verify setup
 5. Monitor student progress through test results
 6. Use the curriculum to guide discussion and pacing
 
 ### For Students
-1. Start with README.md - Getting Started section
-2. Review Transaction and BankAccount source code (study existing)
+1. Start with ../README.md - Getting Started section
+2. Review ../BankingCS/Transaction.cs and ../BankingCS/BankAccount.cs (study existing)
 3. Follow the 6-phase learning path
 4. Implement each framework class following the TODO comments
 5. Run tests frequently: `dotnet test`
-6. Use QUICK_REFERENCE.md for syntax help
-7. Refer to BANKING_CURRICULUM.md for conceptual understanding
+6. Use Docs/QUICK_REFERENCE.md for syntax help
+7. Refer to Docs/BANKING_CURRICULUM.md for conceptual understanding
 
 ### To Run Tests
 ```bash
@@ -248,68 +270,8 @@ For students who complete the curriculum:
 Project is successful when:
 - ✅ All 110+ unit tests pass
 - ✅ Code compiles with no errors or warnings
-- ✅ Students understand OOP principles
-- ✅ Students can explain inheritance hierarchy
-- ✅ Students recognize design patterns used
-- ✅ Students can write LINQ queries
-- ✅ Code follows naming conventions and best practices
-
-## File List
-
-```
-CodeSchool/
-├── BankingCS/
-│   ├── Transaction.cs                    ✅ Completed
-│   ├── BankAccount.cs                    ✅ Completed
-│   ├── CategorizedTransaction.cs         🔧 Framework
-│   ├── InterestBearingAccount.cs         🔧 Abstract Framework
-│   ├── SavingsAccount.cs                 🔧 Framework
-│   ├── CheckingAccount.cs                🔧 Framework
-│   ├── AccountStatement.cs               🔧 Framework
-│   └── BankingCS.csproj
-├── BankingCS.Tests/
-│   ├── UnitTest1.cs                      ✅ BankAccount Tests
-│   ├── StudentFrameworkTests.cs          🔧 Framework Tests
-│   └── BankingCS.Tests.csproj
-├── CodeSchool.sln                        (Solution file)
-├── README.md                             📚 Getting Started Guide
-├── BANKING_CURRICULUM.md                 📚 Complete Curriculum
-├── QUICK_REFERENCE.md                    📚 C# Syntax Reference
-└── IMPLEMENTATION_SUMMARY.md             (This file)
-```
-
-## Next Steps
-
-1. **Review** - Have instructors review the curriculum and tests
-2. **Distribute** - Give students access to CodeSchool folder
-3. **Onboard** - Have students start with README.md Getting Started section
-4. **Support** - Use QUICK_REFERENCE.md to help with syntax questions
-5. **Assess** - Monitor progress through test results
-6. **Iterate** - Adjust pacing based on student progress
-7. **Extend** - Offer extension exercises for advanced students
-
-## Questions & Support
-
-For instructors:
-- Refer to BANKING_CURRICULUM.md for complete learning objectives
-- Check StudentFrameworkTests.cs to see what's expected
-- Use test failures to guide feedback
-
-For students:
-- Start with README.md Getting Started section
-- Use QUICK_REFERENCE.md for C# syntax help
-- Look at Transaction.cs and BankAccount.cs for working examples
-- Read test cases to understand expected behavior
-- Check BANKING_CURRICULUM.md for conceptual understanding
-
----
-
-**Total Implementation**: 
-- 7 C# classes (2 completed, 5 frameworks)
-- 110+ unit tests
-- 3 comprehensive documentation guides
-- Ready for immediate use in teaching C# fundamentals
-
-**Estimated Student Time**: 30-40 hours for complete implementation
-**Difficulty**: Beginner to Intermediate
-**Prerequisites**: Understanding of C# basics from C# 101 modules
+- ✅ Student code demonstrates understanding of OOP
+- ✅ Code follows C# naming conventions
+- ✅ Methods are focused and single-responsibility
+- ✅ Edge cases are handled properly
+- ✅ Student can explain their implementation choices

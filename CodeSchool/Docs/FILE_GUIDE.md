@@ -7,11 +7,11 @@ A comprehensive index of all files in the BankingCS project with descriptions an
 ### Main Documentation
 | File | Purpose | Audience | Time |
 |------|---------|----------|------|
-| [README.md](README.md) | Getting started guide and quick start | Students (Primary), Instructors | 30 min |
-| [BANKING_CURRICULUM.md](BANKING_CURRICULUM.md) | Complete learning curriculum and objectives | Instructors, Advanced Students | 2 hours |
-| [QUICK_REFERENCE.md](QUICK_REFERENCE.md) | C# syntax and pattern reference | Students, Instructors | On-demand |
-| [INSTRUCTOR_GUIDE.md](INSTRUCTOR_GUIDE.md) | Complete teaching guide | Instructors | 1.5 hours |
-| [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) | Project overview and status | Instructors, Project Managers | 20 min |
+| [README.md](../README.md) | Getting started guide and quick start | Students (Primary), Instructors | 30 min |
+| [Docs/BANKING_CURRICULUM.md](BANKING_CURRICULUM.md) | Complete learning curriculum and objectives | Instructors, Advanced Students | 2 hours |
+| [Docs/QUICK_REFERENCE.md](QUICK_REFERENCE.md) | C# syntax and pattern reference | Students, Instructors | On-demand |
+| [Docs/INSTRUCTOR_GUIDE.md](INSTRUCTOR_GUIDE.md) | Complete teaching guide | Instructors | 1.5 hours |
+| [Docs/IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) | Project overview and status | Instructors, Project Managers | 20 min |
 
 ---
 
@@ -20,17 +20,17 @@ A comprehensive index of all files in the BankingCS project with descriptions an
 ### Completed Classes (Study & Reference)
 | File | Lines | Purpose | Concepts | Status |
 |------|-------|---------|----------|--------|
-| [Transaction.cs](BankingCS/Transaction.cs) | ~35 | Single transaction record | Properties, Immutability, Constructors | ✅ Complete |
-| [BankAccount.cs](BankingCS/BankAccount.cs) | ~120 | Basic account with deposits/withdrawals | Collections, Methods, Validation, Static | ✅ Complete |
+| [Transaction.cs](../BankingCS/Transaction.cs) | ~35 | Single transaction record | Properties, Immutability, Constructors | ✅ Complete |
+| [BankAccount.cs](../BankingCS/BankAccount.cs) | ~120 | Basic account with deposits/withdrawals | Collections, Methods, Validation, Static | ✅ Complete |
 
 ### Framework Classes (Student Implementation)
 | File | Lines | Purpose | Concepts | Difficulty |
 |------|-------|---------|----------|------------|
-| [CategorizedTransaction.cs](BankingCS/CategorizedTransaction.cs) | ~50 | Categorized transactions | Inheritance, Enums, Constructor Chaining | 🟢 Easy |
-| [InterestBearingAccount.cs](BankingCS/InterestBearingAccount.cs) | ~150 | Abstract base for interest accounts | Abstract Classes, Polymorphism, Static Methods | 🟡 Medium |
-| [SavingsAccount.cs](BankingCS/SavingsAccount.cs) | ~120 | Savings with withdrawal limits | Override, Business Logic, Date Math | 🟡 Medium |
-| [CheckingAccount.cs](BankingCS/CheckingAccount.cs) | ~130 | Checking with overdraft & fees | Override, Feature Flags, Tiers | 🟡 Medium |
-| [AccountStatement.cs](BankingCS/AccountStatement.cs) | ~250 | Account reports & analysis | LINQ, Filtering, Aggregation | 🔴 Hard |
+| [CategorizedTransaction.cs](../BankingCS/CategorizedTransaction.cs) | ~50 | Categorized transactions | Inheritance, Enums, Constructor Chaining | 🟢 Easy |
+| [InterestBearingAccount.cs](../BankingCS/InterestBearingAccount.cs) | ~150 | Abstract base for interest accounts | Abstract Classes, Polymorphism, Static Methods | 🟡 Medium |
+| [SavingsAccount.cs](../BankingCS/SavingsAccount.cs) | ~120 | Savings with withdrawal limits | Override, Business Logic, Date Math | 🟡 Medium |
+| [CheckingAccount.cs](../BankingCS/CheckingAccount.cs) | ~130 | Checking with overdraft & fees | Override, Feature Flags, Tiers | 🟡 Medium |
+| [AccountStatement.cs](../BankingCS/AccountStatement.cs) | ~250 | Account reports & analysis | LINQ, Filtering, Aggregation | 🔴 Hard |
 
 **Legend**:
 - ✅ Complete - Fully implemented, study this
@@ -45,24 +45,29 @@ A comprehensive index of all files in the BankingCS project with descriptions an
 ### Test Files
 | File | Tests | Purpose | Audience |
 |------|-------|---------|----------|
-| [UnitTest1.cs](BankingCS.Tests/UnitTest1.cs) | 40+ | Foundation class tests (Transaction, BankAccount) | Students learn from; should all pass |
-| [StudentFrameworkTests.cs](BankingCS.Tests/StudentFrameworkTests.cs) | 70+ | Framework class tests | Students implement against; start failing |
+| [BankAccountTests.cs](../BankingCS.Tests/BankAccountTests.cs) | 40+ | Foundation class tests (Transaction, BankAccount) | Students learn from; should all pass |
+| [CategorizedTransactionTests.cs](../BankingCS.Tests/CategorizedTransactionTests.cs) | 7 | CategorizedTransaction tests | Students implement against |
+| [InterestBearingAccountTests.cs](../BankingCS.Tests/InterestBearingAccountTests.cs) | 5 | InterestBearingAccount tests | Students implement against |
+| [SavingsAccountTests.cs](../BankingCS.Tests/SavingsAccountTests.cs) | 7 | SavingsAccount tests | Students implement against |
+| [CheckingAccountTests.cs](../BankingCS.Tests/CheckingAccountTests.cs) | 8 | CheckingAccount tests | Students implement against |
+| [AccountStatementTests.cs](../BankingCS.Tests/AccountStatementTests.cs) | 10+ | AccountStatement tests | Students implement against |
 
 ### Test Breakdown by Class
 ```
-BankAccountTests (40+ tests)
+BankAccountTests.cs (40+ tests)
 ├── Transaction Tests (3)
-├── Constructor Tests (4)
-├── Property Tests (2)
-├── Deposit Tests (5)
-├── Withdrawal Tests (6)
-├── History Tests (3)
-└── Integration Tests (2)
+├── BankAccount Constructor Tests (4)
+├── BankAccount Property Tests (2)
+├── BankAccount Deposit Tests (5)
+├── BankAccount Withdrawal Tests (6)
+├── BankAccount History Tests (3)
+└── BankAccount Integration Tests (2)
 
-CategorizedTransactionTests (7 tests)
-SavingsAccountTests (7 tests)
-CheckingAccountTests (8 tests)
-AccountStatementTests (10+ tests)
+CategorizedTransactionTests.cs (7 tests)
+InterestBearingAccountTests.cs (5 tests)
+SavingsAccountTests.cs (7 tests)
+CheckingAccountTests.cs (8 tests)
+AccountStatementTests.cs (10+ tests)
 ```
 
 ---
@@ -70,9 +75,9 @@ AccountStatementTests (10+ tests)
 ## Reading Order
 
 ### For Students - First Time
-1. **README.md** (30 min) - Project overview, getting started
-2. **Transaction.cs** (20 min) - Read and understand
-3. **BankAccount.cs** (30 min) - Read, run tests
+1. **../README.md** (30 min) - Project overview, getting started
+2. **../BankingCS/Transaction.cs** (20 min) - Read and understand
+3. **../BankingCS/BankAccount.cs** (30 min) - Read, run tests
 4. **QUICK_REFERENCE.md** (as needed) - Syntax help
 5. **Your assigned framework class** - Read comments
 6. **Related tests** - Understand expectations
@@ -85,7 +90,7 @@ AccountStatementTests (10+ tests)
 5. **All tests** (30 min) - Know what's expected
 
 ### For Reviewing Student Progress
-1. Run `dotnet test --filter "StudentName"` (if tests named)
+1. Run `dotnet test --filter "CategorizedTransaction"` (or other class name)
 2. Run `dotnet test` (see overall progress)
 3. Check specific class tests
 4. Review code in source files
@@ -134,6 +139,7 @@ dotnet test --filter "SavingsAccount"
 dotnet test --filter "CheckingAccount"
 dotnet test --filter "CategorizedTransaction"
 dotnet test --filter "AccountStatement"
+dotnet test --filter "InterestBearingAccount"
 
 # With detailed output
 dotnet test --logger "console;verbosity=detailed"
@@ -165,34 +171,34 @@ Tests ARE the specification. When in doubt:
 ## Progress Tracking
 
 ### Week 1: Foundation
-- [ ] Read README.md
-- [ ] Study Transaction.cs
-- [ ] Study BankAccount.cs
+- [ ] Read ../README.md
+- [ ] Study ../BankingCS/Transaction.cs
+- [ ] Study ../BankingCS/BankAccount.cs
 - [ ] Run: `dotnet test --filter "BankAccount"`
 - [ ] All tests passing
 
 ### Week 2: Categorization
-- [ ] Implement CategorizedTransaction.cs
+- [ ] Implement ../BankingCS/CategorizedTransaction.cs
 - [ ] Run: `dotnet test --filter "CategorizedTransaction"`
 - [ ] All 7 tests passing
 
 ### Week 3: Abstract Classes
-- [ ] Implement InterestBearingAccount.cs
+- [ ] Implement ../BankingCS/InterestBearingAccount.cs
 - [ ] Read BANKING_CURRICULUM.md "Abstract Classes" section
 - [ ] Tests may not all pass yet
 
 ### Week 4: Savings Account
-- [ ] Implement SavingsAccount.cs
+- [ ] Implement ../BankingCS/SavingsAccount.cs
 - [ ] Run: `dotnet test --filter "SavingsAccount"`
 - [ ] All 7 tests passing
 
 ### Week 5: Checking Account
-- [ ] Implement CheckingAccount.cs
+- [ ] Implement ../BankingCS/CheckingAccount.cs
 - [ ] Run: `dotnet test --filter "CheckingAccount"`
 - [ ] All 8 tests passing
 
 ### Week 6: Statements
-- [ ] Implement AccountStatement.cs (hardest!)
+- [ ] Implement ../BankingCS/AccountStatement.cs (hardest!)
 - [ ] Run: `dotnet test --filter "AccountStatement"`
 - [ ] All 10+ tests passing
 
@@ -210,7 +216,7 @@ Tests ARE the specification. When in doubt:
 **Concepts**
 - Use QUICK_REFERENCE.md for syntax
 - Check BANKING_CURRICULUM.md for understanding
-- Look at working examples in Transaction.cs and BankAccount.cs
+- Look at working examples in ../BankingCS/Transaction.cs and ../BankingCS/BankAccount.cs
 
 **Implementation Details**
 - Read the test to see expected behavior
@@ -249,14 +255,18 @@ TOTAL                       ~850 lines
 ### Test Coverage
 ```
 UnitTest1.cs                40+ tests (Foundation)
-StudentFrameworkTests.cs    70+ tests (Framework)
+CategorizedTransactionTests.cs    7 tests (Framework)
+InterestBearingAccountTests.cs    5 tests (Framework)
+SavingsAccountTests.cs            7 tests (Framework)
+CheckingAccountTests.cs           8 tests (Framework)
+AccountStatementTests.cs         10+ tests (Framework)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TOTAL                       110+ tests
 ```
 
 ### Documentation
 ```
-README.md                   ~300 lines (Getting started)
+../README.md                ~300 lines (Getting started)
 BANKING_CURRICULUM.md       ~400 lines (Complete curriculum)
 QUICK_REFERENCE.md          ~400 lines (C# reference)
 INSTRUCTOR_GUIDE.md         ~500 lines (Teaching guide)

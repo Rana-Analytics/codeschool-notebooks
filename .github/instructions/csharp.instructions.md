@@ -23,7 +23,8 @@ applyTo: "**/*.cs,**/*.csproj,**/*.sln"
 
 ### File & Folder Organization
 - Source code in `src/` subdirectory per project: `src/ProjectName/ClassName.cs`
-- Tests mirror source structure: `tests/ProjectName.Tests/ClassName.cs` or `ClassName.Tests.cs`
+- Tests MUST mirror source structure: `tests/ProjectName.Tests/ClassName.cs` or `ClassNameTests.cs`, keeping same folder hierarchy and having one tests file per source file
+- Test data and mocks in `tests/ProjectName.Tests/TestData/` or `Mocks/`
 - Keep namespace hierarchy aligned with folder structure
 - Use `namespaces` matching folder depth: `ProjectName.Features.SubFeature`
 
