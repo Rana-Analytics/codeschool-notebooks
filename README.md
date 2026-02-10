@@ -8,6 +8,34 @@ Welcome to the home of .NET interactive notebooks for C#!
 1. Download the .NET Coding Pack for VS Code for [Windows](https://aka.ms/dotnet-coding-pack-win) or [macOS](https://aka.ms/dotnet-coding-pack-mac).
 2. Install the [Polyglot Notebooks](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) extension.
 
+## CodeSchool: Hands-On Learning Projects
+
+For junior developers who want to deepen their C# skills, we offer **CodeSchool** - a comprehensive, testable project-based learning experience.
+
+### BankingCS - Interactive Banking System
+A complete learning project that teaches fundamental C# concepts through building a banking system. Perfect for developers with accounting backgrounds!
+
+- **[Get Started with BankingCS](CodeSchool/README.md)** - Complete project guide and learning path
+- **[BankingCS Curriculum](CodeSchool/BANKING_CURRICULUM.md)** - Detailed learning objectives and progression
+- **[C# Quick Reference](CodeSchool/QUICK_REFERENCE.md)** - Handy reference for C# syntax and patterns
+
+**What You'll Learn:**
+- Classes, Objects, and Properties
+- Inheritance and Polymorphism  
+- Abstract classes and methods
+- Exception handling and validation
+- Collections and LINQ queries
+- Static members and methods
+- Unit testing with XUnit
+- Real-world banking concepts (interest, fees, overdrafts)
+
+**Project Structure:**
+- ✅ **Foundation Classes**: Study Transaction and BankAccount
+- 🔧 **Framework Classes**: Implement CategorizedTransaction, SavingsAccount, CheckingAccount, etc.
+- ✓ **110+ Unit Tests**: Validate your implementations
+
+---
+
 ## C# 101
 
 Download or clone this repo and open the `csharp-101` folder in VS Code to get started with the C# 101 notebooks. Or, if you want just tap on one of the Notebook links below and automatically have it open in VS Code!
