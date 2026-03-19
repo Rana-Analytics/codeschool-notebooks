@@ -54,7 +54,7 @@ More Advanced C# Topics (SOLID, Design Patterns, Async)
   - Read ../BankingCS/BankAccount.cs and understand design
   - Study ../BankingCS.Tests/BankAccountTests.cs to see how tests work
   - Discuss: Why are properties immutable? What happens if you try to set Amount?
-  - Run tests: `dotnet test --filter "BankAccount"`
+  - Run tests: `dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"`
   - Should see 40+ tests passing
 
 **Assessment**: Students understand Transaction and BankAccount design
@@ -89,7 +89,7 @@ More Advanced C# Topics (SOLID, Design Patterns, Async)
   - Hint: Use enum.ToString() or switch expression
 
 - Day 3: Review and test
-  - Run: `dotnet test --filter "CategorizedTransaction"`
+  - Run: `dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"`
   - All 7 tests should pass
   - Discuss: What was easy? What was confusing?
 
@@ -198,7 +198,7 @@ More Advanced C# Topics (SOLID, Design Patterns, Async)
   - GetRemainingFreeWithdrawals()
 
 - Day 6: Testing and debugging
-  - Run: `dotnet test --filter "SavingsAccount"`
+  - Run: `dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"`
   - Debug common issues with month tracking
   - Print debug values to trace execution
 
@@ -266,7 +266,7 @@ Console.WriteLine($"Withdrawal count: {withdrawalsThisMonth}");
   - IsFeeWaived() and GetMonthlyFee()
 
 - Day 6: Testing
-  - Run: `dotnet test --filter "CheckingAccount"`
+  - Run: `dotnet test -- --filter-class "BankingCS.Tests.CheckingAccountTests"`
   - Verify overdraft fee is charged correctly
   - Verify fee waiver logic
 
@@ -349,7 +349,7 @@ CheckingAccount:
   - Currency formatting (C, F2)
 
 - Day 7: Testing and refinement
-  - Run: `dotnet test --filter "AccountStatement"`
+  - Run: `dotnet test -- --filter-class "BankingCS.Tests.AccountStatementTests"`
   - Debug LINQ queries
   - Verify calculations
 

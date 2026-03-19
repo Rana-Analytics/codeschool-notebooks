@@ -90,7 +90,7 @@ AccountStatementTests.cs (10+ tests)
 5. **All tests** (30 min) - Know what's expected
 
 ### For Reviewing Student Progress
-1. Run `dotnet test --filter "CategorizedTransaction"` (or other class name)
+1. Run `dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"` (or other class name)
 2. Run `dotnet test` (see overall progress)
 3. Check specific class tests
 4. Review code in source files
@@ -132,14 +132,14 @@ AccountStatementTests.cs (10+ tests)
 dotnet test
 
 # Only foundation tests (should all pass initially)
-dotnet test --filter "BankAccount"
+dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"
 
 # Only specific framework tests
-dotnet test --filter "SavingsAccount"
-dotnet test --filter "CheckingAccount"
-dotnet test --filter "CategorizedTransaction"
-dotnet test --filter "AccountStatement"
-dotnet test --filter "InterestBearingAccount"
+dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"
+dotnet test -- --filter-class "BankingCS.Tests.CheckingAccountTests"
+dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"
+dotnet test -- --filter-class "BankingCS.Tests.AccountStatementTests"
+dotnet test -- --filter-class "BankingCS.Tests.InterestBearingAccountTests"
 
 # With detailed output
 dotnet test --logger "console;verbosity=detailed"
@@ -174,12 +174,12 @@ Tests ARE the specification. When in doubt:
 - [ ] Read ../README.md
 - [ ] Study ../BankingCS/Transaction.cs
 - [ ] Study ../BankingCS/BankAccount.cs
-- [ ] Run: `dotnet test --filter "BankAccount"`
+- [ ] Run: `dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"`
 - [ ] All tests passing
 
 ### Week 2: Categorization
 - [ ] Implement ../BankingCS/CategorizedTransaction.cs
-- [ ] Run: `dotnet test --filter "CategorizedTransaction"`
+- [ ] Run: `dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"`
 - [ ] All 7 tests passing
 
 ### Week 3: Abstract Classes
@@ -189,17 +189,17 @@ Tests ARE the specification. When in doubt:
 
 ### Week 4: Savings Account
 - [ ] Implement ../BankingCS/SavingsAccount.cs
-- [ ] Run: `dotnet test --filter "SavingsAccount"`
+- [ ] Run: `dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"`
 - [ ] All 7 tests passing
 
 ### Week 5: Checking Account
 - [ ] Implement ../BankingCS/CheckingAccount.cs
-- [ ] Run: `dotnet test --filter "CheckingAccount"`
+- [ ] Run: `dotnet test -- --filter-class "BankingCS.Tests.CheckingAccountTests"`
 - [ ] All 8 tests passing
 
 ### Week 6: Statements
 - [ ] Implement ../BankingCS/AccountStatement.cs (hardest!)
-- [ ] Run: `dotnet test --filter "AccountStatement"`
+- [ ] Run: `dotnet test -- --filter-class "BankingCS.Tests.AccountStatementTests"`
 - [ ] All 10+ tests passing
 
 ### Final

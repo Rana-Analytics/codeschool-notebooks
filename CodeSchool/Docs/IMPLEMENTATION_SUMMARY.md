@@ -197,8 +197,8 @@ This comprehensive C# learning project expands the C# 101 curriculum with hands-
 ```bash
 cd CodeSchool
 dotnet test                                    # All tests
-dotnet test --filter "BankAccount"            # Foundation only
-dotnet test --filter "SavingsAccount"         # Specific assignment
+dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"            # Foundation only
+dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"         # Specific assignment
 dotnet test --logger "console;verbosity=detailed"  # Verbose output
 ```
 

@@ -183,8 +183,8 @@ A comprehensive C# learning project with 2 complete classes, 5 framework classes
 ```bash
 cd CodeSchool
 dotnet test                          # All tests
-dotnet test --filter "BankAccount"   # Foundation only
-dotnet test --filter "SavingsAccount" # Specific class
+dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"   # Foundation only
+dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests" # Specific class
 ```
 
 ## Integration with C# 101
