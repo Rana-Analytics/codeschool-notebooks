@@ -99,7 +99,7 @@ After implementing framework classes:
    - Constructor (call base() and set Category)
    - GetCategoryName() (return enum name)
    - IsIncome() (check if amount > 0)
-4. Run tests: `dotnet test --filter "CategorizedTransaction"`
+4. Run tests: `dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"`
 5. All CategorizedTransaction tests should pass
 
 **Skills Practiced:**
@@ -118,7 +118,7 @@ After implementing framework classes:
    - Validation method `IsValidInterestRate()`
    - `ApplyInterest()` method (not abstract, concrete)
 4. Note: `CalculateInterestEarned()` is abstract - derived classes implement it
-5. Run tests: `dotnet test --filter "InterestBearing"` (will have some failures - that's OK)
+5. Run tests: `dotnet test -- --filter-class "BankingCS.Tests.InterestBearingAccountTests"` (will have some failures - that's OK)
 
 **Skills Practiced:**
 - Abstract base classes and contracts
@@ -136,7 +136,7 @@ After implementing framework classes:
    - Implement `CalculateInterestEarned()` using simple interest
    - Helper methods for tracking
 3. Key challenge: Monthly withdrawal limit resets
-4. Run tests: `dotnet test --filter "SavingsAccount"`
+4. Run tests: `dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"`
 5. Debug carefully - trace through withdrawal logic
 
 **Skills Practiced:**
@@ -161,7 +161,7 @@ After implementing framework classes:
    - `CalculateInterestEarned()` (mostly zero)
    - Helper methods for fee waiver logic
 3. Key challenge: Allowing negative balance while enforcing rules
-4. Run tests: `dotnet test --filter "CheckingAccount"`
+4. Run tests: `dotnet test -- --filter-class "BankingCS.Tests.CheckingAccountTests"`
 
 **Skills Practiced:**
 - Alternative implementations (different from SavingsAccount)
@@ -181,7 +181,7 @@ After implementing framework classes:
    - `GetLargestTransaction()` returning nullable
    - `GetTransactionsByType()` with filtering
    - `GetStatementSummary()` for formatted output
-4. Run tests: `dotnet test --filter "AccountStatement"`
+4. Run tests: `dotnet test -- --filter-class "BankingCS.Tests.AccountStatementTests"`
 5. This is challenging - take time to understand LINQ methods
 
 **Skills Practiced:**
@@ -208,11 +208,11 @@ dotnet test
 
 ### Running Tests for Specific Class
 ```bash
-dotnet test --filter "SavingsAccount"
-dotnet test --filter "CategorizedTransaction"
-dotnet test --filter "AccountStatement"
-dotnet test --filter "CheckingAccount"
-dotnet test --filter "InterestBearingAccount"
+dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"
+dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"
+dotnet test -- --filter-class "BankingCS.Tests.AccountStatementTests"
+dotnet test -- --filter-class "BankingCS.Tests.CheckingAccountTests"
+dotnet test -- --filter-class "BankingCS.Tests.InterestBearingAccountTests"
 ```
 
 ### Running Tests Verbosely

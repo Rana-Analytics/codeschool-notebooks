@@ -79,38 +79,38 @@ CodeSchool/
 
 ### Phase 1: Foundation (Week 1)
 - **Study**: ../BankingCS/Transaction.cs, ../BankingCS/BankAccount.cs
-- **Run**: `dotnet test --filter "BankAccount"`
+- **Run**: `dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"`
 - **Expected**: 40+ tests passing
 - **Time**: 2-3 hours
 
 ### Phase 2: Categorization (Week 2)
 - **Implement**: ../BankingCS/CategorizedTransaction.cs
 - **Concepts**: Inheritance, Enums, Constructor chaining
-- **Run**: `dotnet test --filter "CategorizedTransaction"`
+- **Run**: `dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"`
 - **Time**: 3-4 hours
 
 ### Phase 3: Abstract Classes (Week 3)
 - **Implement**: ../BankingCS/InterestBearingAccount.cs
 - **Concepts**: Abstract classes, Static methods, Template Method pattern
-- **Run**: `dotnet test --filter "InterestBearing"`
+- **Run**: `dotnet test -- --filter-class "BankingCS.Tests.InterestBearingAccountTests"`
 - **Time**: 4-5 hours
 
 ### Phase 4: Savings Account (Week 4)
 - **Implement**: ../BankingCS/SavingsAccount.cs
 - **Concepts**: Method override, Business logic, State tracking
-- **Run**: `dotnet test --filter "SavingsAccount"`
+- **Run**: `dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"`
 - **Time**: 5-6 hours
 
 ### Phase 5: Checking Account (Week 5)
 - **Implement**: ../BankingCS/CheckingAccount.cs
 - **Concepts**: Alternative implementations, Feature flags, Tiered logic
-- **Run**: `dotnet test --filter "CheckingAccount"`
+- **Run**: `dotnet test -- --filter-class "BankingCS.Tests.CheckingAccountTests"`
 - **Time**: 4-5 hours
 
 ### Phase 6: Statements (Week 6)
 - **Implement**: ../BankingCS/AccountStatement.cs
 - **Concepts**: LINQ, Filtering, Aggregation, Reporting
-- **Run**: `dotnet test --filter "AccountStatement"`
+- **Run**: `dotnet test -- --filter-class "BankingCS.Tests.AccountStatementTests"`
 - **Time**: 6-8 hours
 
 ---
@@ -146,36 +146,36 @@ CodeSchool/
 ✅ Can explain why Transaction.Amount is read-only  
 ✅ Can explain how static accountNumberSeed works  
 ✅ Understand validation and exception throwing  
-✅ Run `dotnet test --filter "BankAccount"` → All pass
+✅ Run `dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"` → All pass
 
 ### Categorization (Week 2)
 ✅ Understand inheritance and base keyword  
 ✅ Can use enums for type safety  
-✅ Run `dotnet test --filter "CategorizedTransaction"` → All pass
+✅ Run `dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"` → All pass
 
 ### Abstract Classes (Week 3)
 ✅ Understand abstract classes and contracts  
 ✅ Understand static utility methods  
 ✅ Understand Template Method pattern  
-✅ Run `dotnet test --filter "InterestBearing"` → No failures
+✅ Run `dotnet test -- --filter-class "BankingCS.Tests.InterestBearingAccountTests"` → No failures
 
 ### Savings (Week 4)
 ✅ Can override methods  
 ✅ Can enforce business logic  
 ✅ Can track state across calls  
-✅ Run `dotnet test --filter "SavingsAccount"` → All pass
+✅ Run `dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"` → All pass
 
 ### Checking (Week 5)
 ✅ Can implement alternative designs  
 ✅ Understand feature flags  
 ✅ Understand tiered logic  
-✅ Run `dotnet test --filter "CheckingAccount"` → All pass
+✅ Run `dotnet test -- --filter-class "BankingCS.Tests.CheckingAccountTests"` → All pass
 
 ### Statements (Week 6)
 ✅ Can write LINQ queries  
 ✅ Can filter and aggregate collections  
 ✅ Can format output  
-✅ Run `dotnet test --filter "AccountStatement"` → All pass
+✅ Run `dotnet test -- --filter-class "BankingCS.Tests.AccountStatementTests"` → All pass
 
 ### COMPLETION
 ✅ Run `dotnet test` → 66+ tests pass  
@@ -197,7 +197,7 @@ dotnet test
 ### Specific Test Fails
 ```bash
 # Run just that test with details
-dotnet test --filter "SavingsAccount" --logger "console;verbosity=detailed"
+dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests" --logger "console;verbosity=detailed"
 ```
 
 ### Don't Understand a Concept
@@ -275,9 +275,9 @@ dotnet test
 
 ### Run Specific Tests
 ```bash
-dotnet test --filter "BankAccount"           # Foundation
-dotnet test --filter "SavingsAccount"        # Specific class
-dotnet test --filter "Withdrawal"            # Specific method
+dotnet test -- --filter-class "BankingCS.Tests.BankAccountTests"           # Foundation
+dotnet test -- --filter-class "BankingCS.Tests.SavingsAccountTests"        # Specific class
+dotnet test -- --filter-class "BankingCS.Tests.WithdrawalTests"            # Specific method
 ```
 
 ### Verbose Output
@@ -309,7 +309,7 @@ dotnet build
 5. Review tests - 30 min
 
 ### Reviewing Progress
-1. Run `dotnet test --filter "CategorizedTransaction"` (or other class)
+1. Run `dotnet test -- --filter-class "BankingCS.Tests.CategorizedTransactionTests"` (or other class)
 2. Check specific test outputs
 3. Review code in source files
 4. Provide feedback based on tests
