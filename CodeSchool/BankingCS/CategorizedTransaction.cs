@@ -46,6 +46,11 @@ public enum TransactionCategory
 /// 1. A Category property (TransactionCategory) that cannot be changed after creation
 /// 2. A Constructor that accepts all Transaction parameters plus a category
 /// 3. A Method to get the transaction category name as a string
+/// 
+/// SOLUTION NOTES:
+/// - Calls the base Transaction constructor to initialize inherited transaction data.
+/// - Stores the supplied category as an immutable property.
+/// - Exposes helper methods for category display and income/expense classification.
 /// </summary>
 public class CategorizedTransaction : Transaction
 {
@@ -58,11 +63,9 @@ public class CategorizedTransaction : Transaction
     /// <summary>
     /// Creates a new CategorizedTransaction with full accounting details.
     /// 
-    /// TODO: STUDENT IMPLEMENTATION
-    /// Complete this constructor to:
-    /// 1. Call the base Transaction constructor with amount, date, and note parameters
-    /// 2. Set the Category property
-    /// 3. Consider: What validation should be done? What exceptions might be appropriate?
+    /// SOLUTION NOTES:
+    /// - Uses constructor chaining to initialize the Transaction portion of the object.
+    /// - Persists the category as a read-only property after construction.
     /// </summary>
     /// <param name="amount">The transaction amount (positive for deposits, negative for withdrawals).</param>
     /// <param name="date">The date and time the transaction occurred.</param>
@@ -71,39 +74,34 @@ public class CategorizedTransaction : Transaction
     public CategorizedTransaction(decimal amount, DateTime date, string note, TransactionCategory category)
         : base(amount, date, note)
     {
-        // TODO: Implement this constructor
-        // Set the Category property
-        throw new NotImplementedException("Student must implement this constructor");
+        // Store the category assigned to this transaction.
+        Category = category;
     }
 
     /// <summary>
     /// Gets a human-readable name for the transaction category.
     /// 
-    /// TODO: STUDENT IMPLEMENTATION
-    /// This method should return the English name of the Category enum value.
-    /// For example, TransactionCategory.Salary should return "Salary"
-    /// 
-    /// HINT: You can use the ToString() method on enums, but a better practice
-    /// for accounting purposes is to use a switch expression or statement to return
-    /// meaningful names, potentially with additional details.
+    /// SOLUTION NOTES:
+    /// - Returns the enum member name as a display string.
+    /// - Example: TransactionCategory.Salary -> "Salary"
     /// </summary>
     /// <returns>The category name as a string.</returns>
     public string GetCategoryName()
     {
-        // TODO: Implement this method
-        throw new NotImplementedException("Student must implement this method");
+        return Category.ToString();
     }
 
     /// <summary>
     /// Determines if this transaction is an income (positive) or expense (negative).
     /// 
-    /// TODO: STUDENT IMPLEMENTATION
-    /// Return true if the amount is positive (income), false if negative (expense).
+    /// SOLUTION NOTES:
+    /// - Positive amounts are treated as income.
+    /// - Negative amounts are treated as expenses.
     /// </summary>
     /// <returns>True if this is income, false if expense.</returns>
     public bool IsIncome()
     {
-        // TODO: Implement this method
-        throw new NotImplementedException("Student must implement this method");
+        // Transaction inherits Amount from the base Transaction class.
+        return Amount > 0;
     }
 }
