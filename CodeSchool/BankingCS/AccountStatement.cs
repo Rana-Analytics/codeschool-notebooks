@@ -80,6 +80,11 @@ public class AccountStatement
         // Set properties for AccountNumber, AccountOwner, statement dates
         // Filter and store transactions in the period
         // Calculate opening and closing balances
+
+        // Thinking through the steps:
+        // 1. Set AccountNumber and AccountOwner from the account parameter
+        // 2. Set StatementStartDate and StatementEndDate from the parameters
+        // 3. Calculate OpeningBalance:
         throw new NotImplementedException("Student must implement this constructor");
     }
 
